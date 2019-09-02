@@ -1,0 +1,7 @@
+1.- Inicio
+2.- Pregunto año
+3.- Pregunto mes
+4.- Determinamos si el mes tiene
+    30 ò 31 dàs.
+5.- Mostrar el resultado
+6.- Final
