@@ -2,18 +2,37 @@
 //
 
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int mes, year, dd;
+	cout << "Introduce el year: ";
+	cin >> year;
+	cout << "Introduce el mes (numero): ";
+	cin >> mes;
+	switch (mes)
+	{
+	case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+		dd = 31;
+		break;
+	case 4: case 6: case 9: case 11:
+		dd = 30;
+		break;
+	case 2:
+		dd = 28;
+		break;
+	default:
+		cout << "El mes no es valido";
+		break;
+
+	}
+	if (mes >= 1 && mes <= 12)
+	{
+		cout << "El mes " << mes << " del year "
+			<< year << " tiene " << dd << " dias";
+	}
+	return 0;
 }
-
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
-
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
